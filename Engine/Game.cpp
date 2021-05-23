@@ -20,6 +20,8 @@
  ******************************************************************************************/
 #include "MainWindow.h"
 #include "Game.h"
+#include "Vec2.h"
+#include <iostream>
 
 Game::Game( MainWindow& wnd )
 	:
@@ -38,6 +40,12 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
+	Vec2 vec1(2, 4);
+	Vec2 vec3(3, 6);
+	Vec2 vec4 = vec1 + vec3;
+	vec4 += vec1;
+	float mag = vec1.Magnitude();
+	vec3 = vec1.Normalize();
 }
 
 void Game::ComposeFrame()
